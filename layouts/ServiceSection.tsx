@@ -5,7 +5,7 @@ import { serviceList } from "@/constants/data-constants";
 
 export function ServiceSection() {
   return (
-    <div className={"bg-primary-800 text-white pb-24  mt-32"}>
+    <div className={"bg-primary-800 text-white  py-32"}>
       <PageContainer>
         <div className={"gap-16 grid"}>
           <div>

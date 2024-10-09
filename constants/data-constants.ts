@@ -44,3 +44,14 @@ export const serviceList = [
       "Desain antarmuka dan pengalaman pengguna yang intuitif dan menarik untuk memastikan interaksi yang optimal.",
   },
 ];
+
+export const clientImage = [
+  "/assets/mtt.png",
+  "/assets/mai.png",
+  "/assets/fair.png",
+  "/assets/anc.png",
+  "/assets/klc.png",
+  "/assets/nh.png",
+  "/assets/prisa.png",
+  "/assets/rsc.png",
+];

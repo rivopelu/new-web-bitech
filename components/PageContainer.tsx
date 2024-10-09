@@ -2,7 +2,7 @@ import React from "react";
 
 export function PageContainer(props: IProps) {
   return (
-    <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
+    <main className="container mx-auto max-w-7xl px-6 flex-grow ">
       {props.children}
     </main>
   );
