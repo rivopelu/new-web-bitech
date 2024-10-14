@@ -10,29 +10,37 @@ export function HomePage() {
       <PageContainer>
         <div
           className={
-            "grid grid-cols-2  h-full pt-16  items-center min-h-[65vh] "
+            "grid lg:grid-cols-2 gap-4 lg:gap-0  h-full lg:pt-16 pt-10 text-center lg:text-start  items-center min-h-[65vh] "
           }
         >
-          <div className={"grid  gap-8 mt-24"}>
+          <div className={"grid  lg:gap-8 gap-3 mt-12 lg:mt-24"}>
             <div>
               <h1 className={" text-2xl"}>Selamat Datang di Bitech.id</h1>
-              <h3 className={"text-6xl font-bold text-primary"}>
+              <h3 className={"lg:text-6xl text-4xl font-bold text-primary"}>
                 Inovasi Teknologi untuk Bisnis Anda
               </h3>
             </div>
-            <p>
+            <p className={"text-sm lg:text-base"}>
               Kami menyediakan solusi teknologi terdepan untuk mendukung
               pertumbuhan bisnis di era digital. Dari pengembangan perangkat
               lunak hingga layanan cloud, Bitech.id menghadirkan teknologi yang
               aman, efisien, dan sesuai kebutuhan Anda.
             </p>
             <div>
-              <Button color={"primary"} radius={"sm"}>
+              <Button
+                className={"lg:w-fit w-full"}
+                color={"primary"}
+                radius={"sm"}
+              >
                 Hubungi Kami
               </Button>
             </div>
           </div>
-          <div className={"pl-32 flex items-center justify-center  h-full"}>
+          <div
+            className={
+              "lg:pl-32 mt-16 flex  items-center justify-center  h-full"
+            }
+          >
             <Image
               alt={"software development"}
               className={"w-full"}

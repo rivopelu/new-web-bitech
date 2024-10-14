@@ -12,14 +12,20 @@ export function ClientSection() {
         </h1>
         <div className="flex flex-wrap lg:grid grid-cols-4 items-center mt-10 lg:mt-16 justify-center gap-10">
           {clientImage.map((item, i) => (
-            <Image
+            <div
               key={i}
-              alt={item}
-              className={"w-[100px] lg:w-[200px]"}
-              height={300}
-              src={item}
-              width={300}
-            />
+              className={
+                "border  flex items-center justify-center p-16 h-[130px]"
+              }
+            >
+              <Image
+                alt={item}
+                className={"  "}
+                height={300}
+                src={item}
+                width={300}
+              />
+            </div>
           ))}
         </div>
       </div>

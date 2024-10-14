@@ -6,4 +6,6 @@ export const ASSETS = {
   IL_UIUX: "/assets/il_design.png",
   HOME_ORNAMENT: "/assets/home_ornament.png",
   OVERVIEW_IMAGE: "/assets/overview_image.png",
+  TECH_STACK: "/assets/tech.png",
+  TECH_MOBILE: "/assets/tech-mobile.png",
 };

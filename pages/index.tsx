@@ -4,6 +4,7 @@ import { ServiceSection } from "@/layouts/ServiceSection";
 import { ClientSection } from "@/layouts/ClientSection";
 import { OverviewSection } from "@/layouts/OverviewSection";
 import { DescriptionSection } from "@/layouts/DescriptionSection";
+import { TechSection } from "@/layouts/TechSection";
 
 export default function IndexPage() {
   return (
@@ -14,6 +15,7 @@ export default function IndexPage() {
         <ServiceSection />
         <ClientSection />
         <DescriptionSection />
+        <TechSection />
       </div>
     </DefaultLayout>
   );
