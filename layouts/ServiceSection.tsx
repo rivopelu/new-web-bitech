@@ -17,7 +17,7 @@ export function ServiceSection() {
               inovasi bisnis Anda di era digital.
             </p>
           </div>
-          <div className={"grid grid-cols-3 gap-4"}>
+          <div className={"grid lg:grid-cols-3 gap-4"}>
             {serviceList.map((item, i) => (
               <div key={i}>
                 <div

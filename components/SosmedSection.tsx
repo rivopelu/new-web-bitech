@@ -8,7 +8,7 @@ export function SosmedSection({ className }: { className: string }) {
         isIconOnly
         as={"a"}
         className={
-          "text-2xl w-10 h-10 border rounded-full  flex items-center justify-center"
+          "text-2xl w-10 h-10  rounded-full  flex items-center justify-center"
         }
         href="https://www.facebook.com/profile.php?id=61561685212107"
         target="__blank"
@@ -20,7 +20,7 @@ export function SosmedSection({ className }: { className: string }) {
         isIconOnly
         as={"a"}
         className={
-          "text-2xl w-10 h-10 border rounded-full  flex items-center justify-center"
+          "text-2xl w-10 h-10  rounded-full  flex items-center justify-center"
         }
         href="https://www.instagram.com/bitech.id_/"
         target="__blank"
@@ -32,7 +32,7 @@ export function SosmedSection({ className }: { className: string }) {
         isIconOnly
         as={"a"}
         className={
-          "text-2xl w-10 h-10 border rounded-full  flex items-center justify-center"
+          "text-2xl w-10 h-10  rounded-full  flex items-center justify-center"
         }
         href="https://www.tiktok.com/@bitech.id_"
         target="__blank"

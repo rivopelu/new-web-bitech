@@ -1,6 +1,6 @@
 import { Head } from "./head";
 
-import { Navbar } from "@/components/navbar";
+import { MainNavbar } from "@/components/navbar";
 import { Footer } from "@/components/Footer";
 
 export default function DefaultLayout({
@@ -11,7 +11,7 @@ export default function DefaultLayout({
   return (
     <div className="relative flex flex-col h-screen">
       <Head />
-      <Navbar />
+      <MainNavbar />
 
       <div>{children}</div>
       <Footer />

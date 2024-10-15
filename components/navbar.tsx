@@ -1,137 +1,88 @@
+import { useState } from "react";
 import {
-  Navbar as NextUINavbar,
+  Navbar,
+  NavbarBrand,
   NavbarContent,
   NavbarMenu,
-  NavbarMenuToggle,
-  NavbarBrand,
-  NavbarItem,
   NavbarMenuItem,
+  NavbarMenuToggle,
 } from "@nextui-org/navbar";
-import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
-import { link as linkStyles } from "@nextui-org/theme";
-import NextLink from "next/link";
-import clsx from "clsx";
-import Image from "next/image";
 
-import { siteConfig } from "@/config/site";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  SearchIcon,
-} from "@/components/icons";
+import { useDataConstants } from "@/hooks/useDataConstants";
 import { ASSETS } from "@/constants/assets";
+import { SosmedSection } from "@/components/SosmedSection";
 
-export const Navbar = () => {
-  const searchInput = (
-    <Input
-      aria-label="Search"
-      classNames={{
-        inputWrapper: "bg-default-100",
-        input: "text-sm",
-      }}
-      endContent={
-        <Kbd className="hidden lg:inline-block" keys={["command"]}>
-          K
-        </Kbd>
-      }
-      labelPlacement="outside"
-      placeholder="Search..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-      }
-      type="search"
-    />
-  );
+export function MainNavbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const data = useDataConstants();
 
   return (
-    <div className={"fixed w-full z-50"}>
-      <NextUINavbar isBlurred isBordered maxWidth="xl" position="static">
-        <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-          <NavbarBrand className="gap-3 max-w-fit">
-            <NextLink
-              className="flex justify-start items-center gap-1"
-              href="/"
-            >
-              <div>
-                <Image
-                  alt={"bitech.id"}
-                  className={"h-8 w-auto"}
-                  height={50}
-                  src={ASSETS.LOGO}
-                  width={300}
-                />
-              </div>
-            </NextLink>
-          </NavbarBrand>
-        </NavbarContent>
-        <NavbarContent justify={"center"}>
-          <div className="hidden lg:flex gap-4 justify-start ml-2">
-            {siteConfig.navItems.map((item) => (
-              <NavbarItem key={item.href}>
-                <NextLink
-                  className={clsx(
-                    linkStyles({ color: "foreground" }),
-                    "data-[active=true]:text-primary data-[active=true]:font-medium",
-                  )}
-                  color="foreground"
-                  href={item.href}
-                >
-                  {item.label}
-                </NextLink>
-              </NavbarItem>
-            ))}
-          </div>
-        </NavbarContent>
-        <NavbarContent
-          className="hidden sm:flex basis-1/5 sm:basis-full"
-          justify="end"
-        >
-          <NavbarItem className="hidden sm:flex gap-2">
-            <Link isExternal href={siteConfig.links.twitter} title="Twitter">
-              <TwitterIcon className="text-default-500" />
-            </Link>
-            <Link isExternal href={siteConfig.links.discord} title="Discord">
-              <DiscordIcon className="text-default-500" />
-            </Link>
-            <Link isExternal href={siteConfig.links.github} title="GitHub">
-              <GithubIcon className="text-default-500" />
-            </Link>
-          </NavbarItem>
-        </NavbarContent>
-
-        <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-          <Link isExternal href={siteConfig.links.github}>
-            <GithubIcon className="text-default-500" />
+    <Navbar
+      className={"border-b fixed"}
+      isMenuOpen={isMenuOpen}
+      maxWidth={"xl"}
+      onMenuOpenChange={setIsMenuOpen}
+    >
+      <NavbarContent>
+        <NavbarBrand>
+          <Link className="flex items-center gap-2" href="/">
+            <img
+              alt={"raron sinar cemerlang"}
+              className={"h-8"}
+              src={ASSETS.LOGO}
+            />
           </Link>
-          <NavbarMenuToggle />
-        </NavbarContent>
+        </NavbarBrand>
+      </NavbarContent>
+      <NavbarContent className="md:hidden" justify="end">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
+      </NavbarContent>
 
-        <NavbarMenu>
-          {searchInput}
-          <div className="mx-4 mt-2 flex flex-col gap-2">
-            {siteConfig.navMenuItems.map((item, index) => (
-              <NavbarMenuItem key={`${item}-${index}`}>
-                <Link
-                  color={
-                    index === 2
-                      ? "primary"
-                      : index === siteConfig.navMenuItems.length - 1
-                        ? "danger"
-                        : "foreground"
-                  }
-                  href="#"
-                  size="lg"
-                >
-                  {item.label}
-                </Link>
-              </NavbarMenuItem>
-            ))}
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        {data.menuItems.map((item, index) => (
+          <NavbarMenuItem
+            key={`${item}-${index}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <Link
+              className="w-full uppercase "
+              color={"foreground"}
+              href={item.path}
+              size="lg"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.label}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarContent>
+      <NavbarContent className={"hidden md:flex"} justify="end">
+        <SosmedSection className="flex gap-2" />
+      </NavbarContent>
+      <NavbarMenu>
+        {data.menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              className="w-full capitalize bg-primary-50/10 p-3 rounded-md font-semibold"
+              color={"foreground"}
+              href={item.path}
+              size="lg"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.label}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+        <NavbarMenuItem>
+          <div className="py-4">
+            <SosmedSection className="flex gap-3 flex-col" />
           </div>
-        </NavbarMenu>
-      </NextUINavbar>
-    </div>
+        </NavbarMenuItem>
+      </NavbarMenu>
+    </Navbar>
   );
-};
+}

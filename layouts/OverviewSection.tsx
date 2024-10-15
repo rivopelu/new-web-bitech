@@ -9,8 +9,8 @@ import { PageContainer } from "@/components/PageContainer";
 export function OverviewSection() {
   return (
     <PageContainer>
-      <div className={"grid grid-cols-2 "}>
-        <div className={"mr-24"}>
+      <div className={"grid lg:grid-cols-2 "}>
+        <div className={"lg:mr-24 hidden lg:block "}>
           <Image
             alt={"software development"}
             className={"w-full"}

@@ -10,7 +10,7 @@ export function HomePage() {
       <PageContainer>
         <div
           className={
-            "grid lg:grid-cols-2 gap-4 lg:gap-0  h-full lg:pt-16 pt-10 text-center lg:text-start  items-center min-h-[65vh] "
+            "grid lg:grid-cols-2 gap-4 lg:gap-0 mt-24 lg:mt-0  h-full lg:pt-16 pt-10 text-center lg:text-start  items-center min-h-[65vh] "
           }
         >
           <div className={"grid  lg:gap-8 gap-3 mt-12 lg:mt-24"}>
@@ -43,7 +43,7 @@ export function HomePage() {
           >
             <Image
               alt={"software development"}
-              className={"w-full"}
+              className={"w-full hidden lg:block"}
               height={500}
               src={ASSETS.IL_SOFTWARE}
               width={500}
