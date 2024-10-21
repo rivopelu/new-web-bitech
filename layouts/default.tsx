@@ -1,4 +1,6 @@
 import { ReactNode } from "react";
+import { Button } from "@nextui-org/button";
+import { MdWhatsapp } from "react-icons/md";
 
 import { Head } from "./head";
 
@@ -17,6 +19,19 @@ export default function DefaultLayout(props: IProps) {
 
       <div>{props.children}</div>
       <Footer />
+      <div className="fixed z-[999] lg:bottom-10 lg:right-10 bottom-3 right-3">
+        <Button
+          isIconOnly
+          as={"a"}
+          color="success"
+          href="https://wa.me/6285156078801"
+          radius="full"
+          size="lg"
+          target="__blank"
+        >
+          <MdWhatsapp className="text-white text-3xl" />
+        </Button>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
+import Link from "next/link";
 
 import { PageContainer } from "@/components/PageContainer";
 import { ASSETS } from "@/constants/assets";
@@ -28,11 +29,14 @@ export function HomePage() {
             </p>
             <div>
               <Button
+                as={Link}
                 className={"lg:w-fit w-full"}
                 color={"primary"}
+                href="https://wa.me/6285156078801"
                 radius={"sm"}
+                target={"_blank"}
               >
-                Hubungi Kami
+                Konsultasi Gratis
               </Button>
             </div>
           </div>
