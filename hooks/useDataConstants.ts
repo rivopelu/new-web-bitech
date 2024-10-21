@@ -8,7 +8,7 @@ export function useDataConstants() {
     },
     {
       label: "Layanan",
-      path: "/#service",
+      path: "/service",
     },
     {
       label: "Blogs",

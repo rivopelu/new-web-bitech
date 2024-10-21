@@ -8,4 +8,7 @@ export const ASSETS = {
   OVERVIEW_IMAGE: "/assets/overview_image.png",
   TECH_STACK: "/assets/tech.png",
   TECH_MOBILE: "/assets/tech-mobile.png",
+  IMG_MOBILE_DEV: "/assets/img_mobile_dev.png",
+  IMG_UI_DESIGN: "/assets/img_ui_design.png",
+  IMG_WEB_DEV: "/assets/img_web_dev.png",
 };

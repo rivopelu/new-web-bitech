@@ -1,3 +1,5 @@
+import { ASSETS } from "@/constants/assets";
+
 export function TechSection() {
   return (
     <div>
@@ -7,7 +9,12 @@ export function TechSection() {
       <h5 className="text-center text-2xl font-semibold text-slate-500 capitalize mt-3 tracking-widest">
         {"Untuk Klien Kami"}
       </h5>
-      <div className={"mt-10 lg:grid lg:gap-8 lg:block hidden"}>
+      <img
+        alt={"service"}
+        className={"mt-10 lg:hidden w-full p-5 "}
+        src={ASSETS.TECH_MOBILE}
+      />
+      <div className={"mt-10 lg:grid lg:gap-8  hidden"}>
         {Array.from({ length: 2 }).map((_, idx) => (
           <div
             key={idx}
