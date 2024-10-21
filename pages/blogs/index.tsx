@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Divider } from "@nextui-org/divider";
 
 import { PageContainer } from "@/components/PageContainer";
 import DefaultLayout from "@/layouts/default";
@@ -20,13 +21,17 @@ export default function Index(props: IProps) {
     <DefaultLayout>
       <div className={"h-20"} />
       <PageContainer>
+        <p className={"font-semibold text-center text-xl py-20"}>
+          Temukan informasi terbaru seputar teknologi, pengembangan perangkat
+          lunak, dan tren digital terkini hanya di Blog Bitech.id. Jelajahi
+          artikel yang informatif dan inspiratif untuk membantu Anda memahami
+          dunia teknologi yang terus berkembang.
+        </p>
+      </PageContainer>
+      <Divider />
+
+      <PageContainer>
         <div className={"grid gap-5 mt-10"}>
-          <p className={"font-semibold text-center text-xl"}>
-            Temukan informasi terbaru seputar teknologi, pengembangan perangkat
-            lunak, dan tren digital terkini hanya di Blog Bitech.id. Jelajahi
-            artikel yang informatif dan inspiratif untuk membantu Anda memahami
-            dunia teknologi yang terus berkembang.
-          </p>
           <div className={"grid grid-cols-3 gap-6"}>
             {props.data.map((item, i) => (
               <div key={i} className={"w-full"}>
