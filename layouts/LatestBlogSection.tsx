@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@nextui-org/button";
+import { MdArrowForward } from "react-icons/md";
 
 import { PageContainer } from "@/components/PageContainer";
 import { SupabaseService } from "@/service/supabase.service";
@@ -53,6 +55,18 @@ export function LatestBlogSection() {
             </div>
           </div>
         ))}
+      </div>
+      <div className={"flex items-center justify-center mt-10"}>
+        <Button
+          as={Link}
+          className={"px-10"}
+          color={"primary"}
+          endContent={<MdArrowForward />}
+          href={"/blogs"}
+          variant={"light"}
+        >
+          Lihat Lainnya
+        </Button>
       </div>
     </PageContainer>
   );

@@ -23,7 +23,11 @@ export async function getServerSideProps(ctx: TypeServerSideProps) {
 
 export default function DetailPost(props: IProps) {
   return (
-    <DefaultLayout>
+    <DefaultLayout
+      description={props.data.description}
+      ogImage={props.data.image}
+      title={props.data.title}
+    >
       <div className={"h-20"} />
       <PageContainer>
         <div className={"py-20 grid gap-10"}>

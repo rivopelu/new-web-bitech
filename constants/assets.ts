@@ -11,4 +11,5 @@ export const ASSETS = {
   IMG_MOBILE_DEV: "/assets/img_mobile_dev.png",
   IMG_UI_DESIGN: "/assets/img_ui_design.png",
   IMG_WEB_DEV: "/assets/img_web_dev.png",
+  OG_IMAGE_DEFAULT: "/assets/og_image.png",
 };

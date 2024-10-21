@@ -1,20 +1,29 @@
+import { ReactNode } from "react";
+
 import { Head } from "./head";
 
 import { MainNavbar } from "@/components/navbar";
 import { Footer } from "@/components/Footer";
 
-export default function DefaultLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function DefaultLayout(props: IProps) {
   return (
     <div className="relative flex flex-col h-screen max-w-screen overflow-x-hidden">
-      <Head />
+      <Head
+        description={props.description}
+        ogImage={props.ogImage}
+        title={props.title}
+      />
       <MainNavbar />
 
-      <div>{children}</div>
+      <div>{props.children}</div>
       <Footer />
     </div>
   );
+}
+
+interface IProps {
+  children: ReactNode;
+  title?: string;
+  description?: string;
+  ogImage?: string;
 }

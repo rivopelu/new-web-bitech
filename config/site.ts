@@ -1,8 +1,9 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + NextUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "bitech.id - developer aplikasi di sulut - PT. Bitung Teknolog Digital",
+  description:
+    "Penyedia solusi digital: Website, aplikasi web, Android, iOS, desktop. Teknologi terbaik untuk bisnis",
   navItems: [
     {
       label: "Home",
