@@ -8,6 +8,7 @@ import { OverviewSection } from "@/layouts/OverviewSection";
 import { DescriptionSection } from "@/layouts/DescriptionSection";
 import { TechSection } from "@/layouts/TechSection";
 import { ContactSection } from "@/layouts/ContactSection";
+import { LatestBlogSection } from "@/layouts/LatestBlogSection";
 
 export default function IndexPage() {
   return (
@@ -16,6 +17,7 @@ export default function IndexPage() {
         <HomePage />
         <OverviewSection />
         <ServiceSection />
+        <LatestBlogSection />
         <ClientSection />
         <DescriptionSection />
         <TechSection />

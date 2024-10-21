@@ -99,3 +99,25 @@
     opacity: 0.1; /* 10% opacity */
     z-index: -1; /* Ensure it stays behind the content */
 }
+
+
+.article__ {
+    width: 100%;
+
+    .image {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    ol,
+    ul {
+        list-style: disc;
+        margin-left: 24px !important;
+    }
+
+    img {
+        margin: auto !important;
+        width: fit-content;
+    }
+}
