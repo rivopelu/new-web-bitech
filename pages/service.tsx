@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import DefaultLayout from "@/layouts/default";
 import { PageContainer } from "@/components/PageContainer";
-import { ASSETS } from "@/constants/assets";
+import { serviceList } from "@/constants/data-constants";
 
 export default function Service() {
   return (
@@ -28,16 +28,38 @@ export default function Service() {
       </div>
 
       <div>
-        <div className={"grid gap-2 grid-cols-2"}>
-          <Image
-            alt={"web development"}
-            className={"w-[300px]"}
-            height={900}
-            src={ASSETS.IMG_WEB_DEV}
-            width={900}
-          />
-          <h3 className={"font-semibold text-3xl"}>Web Development</h3>
-        </div>
+        <PageContainer>
+          <div className={`flex flex-col lg:gap-32 gap-4`}>
+            {serviceList.map((item, i) => (
+              <div key={i}>
+                <div
+                  className={`lg:flex ${i % 2 == 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 `}
+                >
+                  <Image
+                    alt={"web development"}
+                    className={"lg:w-1/2 w-full border bg-white rounded-md"}
+                    height={900}
+                    src={item.imageFull}
+                    width={900}
+                  />
+                  <div
+                    className={
+                      "flex lg:w-1/2 flex-col lg:gap-4 gap-1 mt-3 lg:mt-0 justify-center"
+                    }
+                  >
+                    <h3 className={"font-semibold lg:text-7xl"}>
+                      {item.title}
+                    </h3>
+
+                    <p className={"lg:text-3xl text-slate-500"}>
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </PageContainer>
       </div>
     </DefaultLayout>
   );

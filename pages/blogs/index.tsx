@@ -32,7 +32,7 @@ export default function Index(props: IProps) {
 
       <PageContainer>
         <div className={"grid gap-5 mt-10"}>
-          <div className={"grid grid-cols-3 gap-6"}>
+          <div className={"grid lg:grid-cols-3 gap-6"}>
             {props.data.map((item, i) => (
               <div key={i} className={"w-full"}>
                 <Link href={`/blogs/${item.slug}`}>

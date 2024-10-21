@@ -26,12 +26,14 @@ export const dataListOverview = [
 export const serviceList = [
   {
     image: ASSETS.IL_WEB_DEV,
+    imageFull: ASSETS.IMG_WEB_DEV,
     title: "Web App Development",
     description:
       "Pengembangan website yang fungsional, responsif, dan dirancang untuk kebutuhan bisnis Anda.",
   },
   {
     image: ASSETS.IL_MOBILE_APP,
+    imageFull: ASSETS.IMG_MOBILE_DEV,
 
     title: "Mobile App Development",
     description:
@@ -39,6 +41,8 @@ export const serviceList = [
   },
   {
     image: ASSETS.IL_UIUX,
+    imageFull: ASSETS.IMG_UI_DESIGN,
+
     title: "UI/UX Design",
     description:
       "Desain antarmuka dan pengalaman pengguna yang intuitif dan menarik untuk memastikan interaksi yang optimal.",
