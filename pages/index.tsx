@@ -1,14 +1,13 @@
 import { Divider } from "@nextui-org/divider";
 
-import DefaultLayout from "@/layouts/default";
-import { HomePage } from "@/layouts/HomePage";
-import { ServiceSection } from "@/layouts/ServiceSection";
 import { ClientSection } from "@/layouts/ClientSection";
-import { OverviewSection } from "@/layouts/OverviewSection";
-import { DescriptionSection } from "@/layouts/DescriptionSection";
-import { TechSection } from "@/layouts/TechSection";
 import { ContactSection } from "@/layouts/ContactSection";
-import { LatestBlogSection } from "@/layouts/LatestBlogSection";
+import DefaultLayout from "@/layouts/default";
+import { DescriptionSection } from "@/layouts/DescriptionSection";
+import { HomePage } from "@/layouts/HomePage";
+import { OverviewSection } from "@/layouts/OverviewSection";
+import { ServiceSection } from "@/layouts/ServiceSection";
+import { TechSection } from "@/layouts/TechSection";
 
 export default function IndexPage() {
   return (
@@ -17,7 +16,6 @@ export default function IndexPage() {
         <HomePage />
         <OverviewSection />
         <ServiceSection />
-        <LatestBlogSection />
         <ClientSection />
         <DescriptionSection />
         <TechSection />
