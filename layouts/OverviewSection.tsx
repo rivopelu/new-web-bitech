@@ -40,7 +40,7 @@ export function OverviewSection() {
               {dataListOverview.map((item, i) => (
                 <li key={i} className={"flex gap-2"}>
                   <div className={""}>
-                    <MdCheckCircle className={"text-green-500 text-2xl"} />
+                    {MdCheckCircle({ className: "text-green-500 text-2xl" })}
                   </div>
                   <p>
                     <strong>{item[0]}</strong>

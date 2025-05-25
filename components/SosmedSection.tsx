@@ -14,7 +14,7 @@ export function SosmedSection({ className }: { className: string }) {
         target="__blank"
         variant="light"
       >
-        <FaFacebook className={"text-slate-600"} />
+        <div>{FaFacebook({ className: "text-slate-600" })}</div>
       </Button>
       <Button
         isIconOnly
@@ -26,7 +26,7 @@ export function SosmedSection({ className }: { className: string }) {
         target="__blank"
         variant="light"
       >
-        <FaInstagram className={"text-slate-600"} />
+        <div>{FaInstagram({ className: "text-slate-600" })}</div>
       </Button>
       <Button
         isIconOnly
@@ -38,7 +38,7 @@ export function SosmedSection({ className }: { className: string }) {
         target="__blank"
         variant="light"
       >
-        <FaTiktok className={"text-slate-600"} />
+        <div>{FaTiktok({ className: "text-slate-600" })}</div>
       </Button>
     </div>
   );

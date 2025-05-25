@@ -40,7 +40,7 @@ export function ContactSection() {
           <div className={"flex  flex-col justify-"}>
             <div className={"grid gap-5 lg:grid-cols-3 h-full "}>
               {dataContact.map((item, i) => {
-                const Icon = item.icon;
+                const Icon = item.icon as any;
 
                 return (
                   <Card
@@ -63,7 +63,7 @@ export function ContactSection() {
                               "border w-12 h-12 flex items-center justify-center rounded-full"
                             }
                           >
-                            <Icon className="text-2xl text-slate-600" />
+                            {Icon({ className: "text-2xl text-slate-600" })}
                           </div>
                         </div>
                         <div>

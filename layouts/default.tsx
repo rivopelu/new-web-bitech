@@ -29,7 +29,7 @@ export default function DefaultLayout(props: IProps) {
           size="lg"
           target="__blank"
         >
-          <MdWhatsapp className="text-white text-3xl" />
+          {MdWhatsapp({ className: "text-white text-3xl" })}
         </Button>
       </div>
     </div>
